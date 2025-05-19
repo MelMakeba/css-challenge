@@ -1,0 +1,825 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;800&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    color: white;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 1rem;
+    left: 5%;
+    z-index: 11;
+    margin-left: 40px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+
+.nav-list {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-list:first-child {
+    margin-left: 350px;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-list-login {
+    display: flex;
+    gap: 1.5rem; 
+    list-style: none;
+    align-items: center;
+}
+
+.nav-list-login a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    white-space: nowrap;  
+}
+
+.nav-list-login li:last-child a {
+    background-color: #0096FF;
+    color: white;
+    padding: 0.5rem 0.75rem;  
+    border-radius: 4px;
+    font-size: 0.9rem; 
+}
+
+/* Home section improvements */
+#home {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./images/hero.png');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding-top: 80px;
+    position: relative;
+    margin-bottom: 400px;
+}
+
+.home-content {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-top: 550px;
+}
+
+.home-content h2 {
+    font-weight: 800;
+    font-size: 3.2rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.home-content p {
+    font-weight: 300;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+    max-width: 90%;
+}
+
+
+.buttons {
+    display: flex;
+    gap: 1.2rem;
+    margin-bottom: 3rem;
+}
+
+.btn {
+    font-family: 'Montserrat', sans-serif;
+    padding: 0.9rem 1.8rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #0096FF;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #0078cc;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.cards {
+
+    display: flex;
+    position: relative;
+    z-index: 2;
+    padding: 0 5%;
+    gap: 50px; 
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.card-content {
+    flex: 1;
+    background-color: white;
+    padding: 2.5rem 1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    color: #0096FF;
+}
+
+.card-content:first-child {
+    border-radius: 5px 0 0 5px;
+}
+
+.card-content:last-child {
+    border-radius: 0 5px 5px 0;
+}
+
+.card-content:nth-child(3) {
+    background-color: #0096FF;
+    color: white;
+}
+
+.card-content h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.card-content p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+.card-content img {
+    margin-bottom: 1rem;
+    width: 60px;
+    height: auto;
+}
+
+.card-content img[src$=".svg"] {
+    margin-bottom: 1rem;
+    width: 60px;
+    height: auto;
+    filter: invert(48%) sepia(90%) saturate(2786%) hue-rotate(190deg) brightness(103%) contrast(107%);
+}
+
+.card-content:nth-child(3) img[src$=".svg"] {
+    filter: brightness(0) invert(1); 
+}
+
+.card-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2.5rem;
+    margin-top: 4rem;
+    padding: 0 5%;
+    width: 100%;
+    margin-bottom: 100px; 
+}
+
+.card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1.5rem;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: #252B42;
+}
+
+.card p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    color: #737373;
+    line-height: 1.5;
+    font-size: 0.9rem;
+}
+
+.card img[src$=".svg"] {
+    margin-bottom: 1.5rem;
+    width: 60px;
+    height: auto;
+    filter: invert(48%) sepia(90%) saturate(2786%) hue-rotate(190deg) brightness(103%) contrast(107%);
+}
+
+
+#product {
+    padding: 120px 0 80px 0; 
+    background-color: white;
+    margin-top: 150px; 
+    position: relative; 
+    z-index: 1;
+    clear: both; 
+} 
+
+.product-header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 70px; 
+    padding: 0 20px;
+}
+
+.product-header h2 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #252B42;
+    margin-bottom: 15px;
+}
+
+.product-header p {
+    color: #737373;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.product-content {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 0 5%;
+    margin-bottom: 60px;
+}
+
+.card-profile {
+    background-color: white;
+    border: 1px solid #DEDEDE;
+    border-radius: 5px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    max-width: 330px;
+}
+
+.card-profile img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.card-profile p {
+    color: #737373;
+    font-size: 0.9rem;
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+
+.card-profile::after {
+    content: "★★★★★";
+    color: #F3CD03;
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+}
+
+
+.subscriptions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 30px 5%;
+    margin: 20px 0 60px;
+}
+
+.subscribe {
+    padding: 50px;
+}
+
+.subscribe img {
+    max-height: 40px;
+    width: auto;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.subscribe img:hover {
+    opacity: 1;
+}
+
+
+.newsletter {
+    background-color: #2D4059;
+    color: white;
+    padding: 30px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: center;
+}
+
+.newsletter h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.input {
+    display: flex;
+    max-width: 450px;
+    flex-grow: 1;
+}
+
+.input input {
+    padding: 15px;
+    border: 1px solid #E6E6E6;
+    border-radius: 5px 0 0 5px;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.input .btn-primary {
+    border-radius: 0 5px 5px 0;
+    padding: 15px 25px;
+    background-color: #0096FF;
+    color: white;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+}
+
+/* Pricing Section Styles */
+#pricing {
+    padding: 80px 0 100px;
+    background-color: #FAFAFA;
+}
+
+.pricing-header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 70px;
+    padding: 0 20px;
+}
+
+.pricing-header h2 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #252B42;
+    margin-bottom: 15px;
+}
+
+.pricing-header p {
+    color: #737373;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.pricing-content {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 0 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.card-pricing {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-color: white;
+    border: 1px solid #DEDEDE;
+    border-radius: 10px;
+    padding: 30px 40px;
+    text-align: center;
+    max-width: 330px;
+    transition: all 0.3s ease;
+}
+
+.card-pricing:nth-child(2) {
+    background-color: #252B42;
+    color: white;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15);
+    transform: translateY(-10px) scale(1.05);
+    z-index: 2;
+}
+
+
+.card-pricing h3 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #252B42;
+}
+
+.card-pricing:nth-child(2) h3 {
+    color: white;
+}
+
+.card-pricing h6 {
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+    color: #737373;
+}
+
+.card-pricing:nth-child(2) h6 {
+    color: #D9D9D9;
+}
+
+
+.card-pricing p:nth-of-type(1) {
+    font-weight: 800;
+    font-size: 2.5rem;
+    color: #252B42;
+    margin-bottom: 0;
+    line-height: 1.2;
+}
+
+.card-pricing:nth-child(2) p:nth-of-type(1) {
+    color: white;
+}
+
+.card-pricing p:nth-of-type(2) {
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: #737373;
+    margin-bottom: 30px;
+}
+
+.card-pricing:nth-child(2) p:nth-of-type(2) {
+    color: #D9D9D9;
+}
+
+.card-pricing input[type="checkbox"] {
+    display: none;
+}
+
+.card-pricing label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    color: #252B42;
+    font-weight: 500;
+    text-align: left;
+}
+
+.card-pricing:nth-child(2) label {
+    color: white;
+}
+
+.card-pricing label::before {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url('./images/checkmark-circle-outline.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+}
+
+.card-pricing:nth-child(2) label::before {
+    filter: brightness(0) invert(1);
+}
+
+
+.card-pricing .btn {
+    margin-top: auto;
+    padding: 15px 0;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.card-pricing:nth-child(2) .btn {
+    background-color: white;
+    color: #0096FF;
+}
+
+
+@media screen and (max-width: 992px) {
+    .pricing-content {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .card-pricing {
+        flex: 0 0 45%;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .card-pricing {
+        flex: 0 0 100%;
+        max-width: 450px;
+    }
+    
+    .card-pricing:nth-child(2) {
+        transform: none;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .nav-list:first-child {
+        margin-left: 150px;  
+    }
+    
+    .nav-list, .nav-list-login {
+        gap: 1rem;  
+    }
+    
+    .nav-list-login li:last-child a {
+        padding: 0.4rem 0.6rem;
+    }
+
+    .card-info {
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+    
+    .card {
+        flex: 0 0 45%;
+    }
+
+   
+    #home {
+        height: auto;
+        min-height: 70vh;
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+    .home-content h2 {
+        font-size: 2.5rem;
+    }
+    
+  
+    .cards {
+        flex-wrap: wrap;
+    }
+    
+    .card-content {
+        flex: 1 1 45%;
+        min-width: 250px;
+    }
+
+    .product-content {
+        flex-wrap: wrap;
+    }
+    
+    .card-profile {
+        flex: 0 0 45%;
+        max-width: 45%;
+    }
+    
+    .newsletter {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .newsletter h2 {
+        margin-bottom: 20px;
+    }
+    
+    .input {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0.5rem 3%;
+    }
+    
+    .nav-list:first-child {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    h1 {
+        position: relative;
+        margin-bottom: 1rem;
+        text-align: center;
+        margin-left: 0;
+    }
+    
+    .nav-list-login li:last-child a {
+        padding: 0.4rem 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .card-info {
+        flex-direction: column;
+    }
+    
+    .card {
+        width: 100%;
+    }
+
+    #home {
+        padding-top: 100px;
+        text-align: center;
+    }
+
+    .buttons {
+        flex-direction: column;
+        width: 80%;
+        max-width: 300px;
+        gap: 0.8rem;
+    }
+    
+   
+    .cards {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .card-content {
+        width: 100%;
+    }
+
+    .card-info {
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+    
+    .card {
+        width: 100%;
+    }
+
+    .product-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .card-profile {
+        flex: 0 0 100%;
+        max-width: 380px;
+    }
+    
+    .subscriptions {
+        gap: 20px;
+    }
+    
+    .subscribe img {
+        max-height: 20px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    
+    .navbar {
+        padding: 0.5rem 2%;
+        position: relative; 
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+    
+    
+    h1 {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+        margin-bottom: 0.5rem;
+        padding-top: 0.5rem;
+        z-index: 15;
+    }
+    
+    .nav-list, .nav-list-login {
+        gap: 0.6rem;
+    }
+    
+    .nav-list a, .nav-list-login a {
+        font-size: 0.8rem;
+    }
+
+    
+    #home {
+        padding-top: 0; 
+        padding-bottom: 80px;
+        height: auto;
+        min-height: 60vh;
+        margin-top: 50px; 
+    }
+    
+    .home-content {
+        width: 100%;
+        padding-top: 2rem; 
+    }
+
+    .home-content h2 {
+        font-size: 1.7rem;
+    }
+    
+    
+    .home-content p {
+        font-size: 0.85rem;
+        padding: 0 1rem;
+    }
+    
+    .btn {
+        width: 100%;
+        padding: 0.7rem 1rem;
+        font-size: 0.85rem;
+    }
+    
+   
+    .cards, .card-info {
+        padding: 0 3%;
+        gap: 1.2rem;
+    }
+    
+    .card-content, .card {
+        padding: 1.5rem 1rem;
+    }
+    
+    .card-content h3, .card h3 {
+        font-size: 1.1rem;
+    }
+    
+    .card-content p, .card p {
+        font-size: 0.8rem;
+    }
+    
+    .card-content img, .card img[src$=".svg"] {
+        width: 45px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    h1 {
+        font-size: 1.2rem;
+    }
+    
+    .nav-list, .nav-list-login {
+        gap: 0.4rem;
+    }
+    
+    .nav-list a, .nav-list-login a {
+        font-size: 0.75rem;
+    }  
+
+    .home-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .card-content, .card {
+        padding: 1.2rem 0.8rem;
+    }
+}
+
